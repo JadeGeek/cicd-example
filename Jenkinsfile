@@ -1,9 +1,10 @@
 pipeline {
-    agent any
+    // agent any
       
-    tools {
-       go "Go 1.10.2"
-    }
+    // tools {
+    //    go "Go 1.10.2"
+    // }
+    agent { docker { image 'golang' } }
     
     stages {
         stage('Build Bin') {
